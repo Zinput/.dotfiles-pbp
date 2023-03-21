@@ -1,0 +1,85 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["clock", "custom/weather"],
+    "modules-right": ["wlr/taskbar", "pulseaudio", "memory", "cpu", "battery", "network", "idle_inhibitor", "custom/power"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "clock": {
+        "format": "{:%a, %d. %b  %I:%M}",
+        "tooltip": false,
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "memory": {
+        "interval": 30,
+        "format": "{used:0.1f}G/{total:0.1f}G <span font_weight='bold'></span>"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "{}% <span font_weight='bold'></span>",
+        "max-length": 10
+    },
+    "idle_inhibitor": {
+	      "format": "{icon}",
+	      "format-icons": {
+	          "activated": "",
+	          "deactivated": ""
+	      },
+        "timeout": 60
+    },
+    "network": {
+        "interval": 5,
+        "format-wifi": "<span font_weight='bold'></span>  {essid} ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "<span font_weight='bold'></span>  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "<span font_weight='bold'>⚠</span>  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "xfce4-terminal -e 'nmtui'",
+    },
+    "pulseaudio": {
+        "format": "{volume}% <span font_weight='bold'>{icon} {format_source}</span>",
+        "format-bluetooth": "{volume}% <span font_weight='bold'>{icon} </span>",
+        "format-muted": "<span font_weight='bold'> {format_source}</span>",
+	"format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+    "custom/weather": {
+        "tooltip": false,
+        "exec": "curl 'https://wttr.in/Cleveland?m&format=1'",
+        "interval": 800
+    },
+    "battery": {
+        "bat": "cw2015-battery",
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% <span font_weight='bold'>{icon}</span>",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "<span font_weight='bold'></span>  {capacity}% - {time}",
+        "max-length": 25
+    },
+    "custom/power": {
+        "format": "<span font_weight='bold'> </span>",
+	"on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Suspend' 'swaymsg exec systemctl suspend' -b 'Shutdown' 'systemctl poweroff'"
+	}
+
+}
