@@ -49,7 +49,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg ~/Pictures/IMG_1272.JPEG fill
+output * bg ~/Pictures/wallpapers/pexels-felix-mittermeier-956981.jpg fill
 #
 # Example configuration:
 #

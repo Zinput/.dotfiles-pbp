@@ -40,6 +40,11 @@ window#waybar {
   padding-right: 1rem;
 }
 
+#upower {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
 #network.disconnected {
   color: orange;
 }
