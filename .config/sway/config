@@ -304,6 +304,7 @@ bindsym XF86Launch3 exec asusctl led-mode -n
 
 # save screenshot
 bindsym $mod+F6 exec grim ~/Pictures/$(date +'%m-%d-%Y-%I%M'.png)
+bindsym $mod+p exec grimshot save active
 
 # screen mirroring (if this doesn't work, change eDP-2 to your display)
 # bindsym $mod+F9 exec wl-mirror eDP-2
@@ -311,8 +312,8 @@ bindsym $mod+F6 exec grim ~/Pictures/$(date +'%m-%d-%Y-%I%M'.png)
 # start blueberry app for managing bluetooth devices from tray:
 #exec --no-startup-id blueberry-tray
 
-# Desktop notifications
-exec mako
+# Desktop notifications (not needed because lazy start)
+# exec mako
 
 # Network Applet
 exec nm-applet --indicator
