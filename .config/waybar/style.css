@@ -1,70 +1,125 @@
 * {
-  font-family: Iosevka;
-  font-size: 12pt;
-  color: white;
   border: none;
   border-radius: 0;
-  box-shadow: none;
-  text-shadow: none;
-  transition-duration: 0s;
-  font-weight: normal;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  min-height: 0;
+}
+
+#workspaces,
+#mode,
+#window,
+#clock,
+#custom-weather,
+#tray,
+#taskbar,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#upower,
+#network,
+#idle_inhibitor,
+#custom-power {
+  background: #1e1e2e;
+  padding: 0px 10px;
+  margin: 3px 0px;
+}
+
+#workspaces {
+  background: #1e1e2e;
+  border-radius: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #313244;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: #a6adc8;
+}
+
+#workspaces button.focused {
+  color: #a6adc8;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: #a6e3a1;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+  border-radius: 0;
+  border: 0;
+  outline: 0;
+}
+
+#mode {
+  padding-left: 4px;
+  border-radius: 10px 0 0 10px;
+  color: #cdd6f4;
+}
+
+#window {
+  background: transparent;
+  color: #cdd6f4;
+  border-radius: 0 10px 10px 0;
 }
 
 window#waybar {
-  background: #1b182c;
-  opacity: 0.85;
+  background: transparent;
+  color: #cdd6f4;
 }
 
-#window,
-#memory,
-#pulseaudio,
-#disk,
-#network,
-
-#power {
-  padding-left: 1rem;
+tooltip {
+  background: #1e1e2e;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
 }
 
-#cpu {
-  padding-left: 1rem;
-  padding-right: 1rem;
+#clock {
+  color: #f9e2af;
+  border-radius: 10px 0 0 10px;
 }
 
 #custom-weather {
-  padding-left: 2rem;
-  font-weight: bold;
+  border-radius: 0 10px 10px 0;
+  margin-left: 0px;
 }
 
-#battery {
-  padding-left: 1rem;
-  padding-right: 1rem;
+#tray {
+  border-radius: 10px;
+  margin-right: 4px;
 }
 
-#upower {
-  padding-left: 0rem;
-  padding-right: 0rem;
+#taskbar {
+  border-radius: 10px;
+  margin-right: 4px;
+}
+
+#pulseaudio {
+  border-radius: 10px 0 0 10px;
 }
 
 #network.disconnected {
   color: orange;
 }
 
-#idle_inhibitor {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-#workspaces {
-  background: #962a54;
-  color: white;
-  font-weight: bold;
-  border-radius: 0 1rem 1rem 0;
-}
-#workspaces button {
-  background: transparent;
-}
-
-#workspaces button.focused {
-  background: #7a2043;
-  border-radius: 1rem;
+#custom-power{
+  color: #a6adc8;
+  background: #1e1e2e;
+  border-radius: 0 10px 10px 0;
+  margin-right: 5px;
 }

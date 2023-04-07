@@ -1,22 +1,23 @@
 * {
-  font-family: Iosevka;
+  font-family: monospace;
   border-color: transparent;
   outline-style: none;
 }
 
 window {
   border-radius: 1rem;
-  background: #1b182c;
-  color: white;
+  background: #1e1e2e;
+  color: #cdd6f4;
   padding: 1rem;
+  border-color: #fab387;
 }
 
 #input {
   border-radius: 1rem;
   border-color: transparent;
-  background: #962a54;
-  color: white;
-  font-size: 16pt;
+  background: transparent;
+  color: #cdd6f4;
+  font-size: 14pt;
   padding: 0.5rem;
   outline: none;
 }
@@ -26,7 +27,8 @@ window {
 }
 
 #selected {
-  background: #a33962;
+  background: #181825;
+  color: #fab387;
   border-color: transparent;
   border: none;
   margin: 0;
@@ -34,23 +36,25 @@ window {
   border-radius: 1rem;
 }
 
-#entry:nth-child(even) {
-  background: #1f1c33;
-  border-radius: 1rem;
-}
+/* #entry:nth-child(even) { */
+/*   background: #1f1c33; */
+/*   border-radius: 1rem; */
+/* } */
 
 #text {
   padding: 0.75rem;
-  font-size: 13pt;
+  font-size: 11pt;
 }
 
 #outer-box {
-  background: transparent;
-  padding: 1rem;
+  background: #181825;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
 
 #inner-box {
-  background: transparent;
+  background: #1e1e2e;
+  border-radius: 1rem;
 }
 
 #entry {
